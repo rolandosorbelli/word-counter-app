@@ -16,7 +16,7 @@ WordCount.prototype.countWords = function(){
 		if (self.counted[word] === undefined) {
 			self.counted[word] = 1;
 		} else {
-			self.counted[word] +1;
+			self.counted[word] +=1;
 		}
 	});
 };

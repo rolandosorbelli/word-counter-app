@@ -11,8 +11,13 @@ describe("getData", function(){
 		expect(data).to.equal("./input-test.txt")
 	});
 
-	it('returns an array', function() {
-		data = formatData('test/input-test');
+	it('returns an array of strings', function() {
+		data = formatData('public/input-test');
+		expect(data).to.eql([ "THIS", "FILE", "IS", "A", "TEST", "BECAUSE", "IT", "IS", "A", "TEST" ]);
+	});
+
+	it('returns an array of strings', function() {
+		data = formatData('public/input-test');
 		expect(data).to.eql([ "THIS", "FILE", "IS", "A", "TEST", "BECAUSE", "IT", "IS", "A", "TEST" ]);
 	});
 })
