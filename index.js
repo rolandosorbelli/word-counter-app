@@ -1,12 +1,10 @@
-var express = require('express');
-var app = express();
-app.set('view engine', 'ejs');
+var http = require('http');
+var fs = require('fs');
 
-app.get('/', function (req, res) {
-  res.render('index')
-})
-
-var server = app.listen(8000, function() {
-  var host = server.address().address;
-  var port = server.address().port;
+var server = http.createServer(function (req, res) {
+    fs.readFile("dog.txt", "utf8", function (error, data) {
+    res.end(data)
+    });
 });
+server.listen(8000);
+console.log('The server is running...')
