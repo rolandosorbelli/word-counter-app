@@ -1,0 +1,32 @@
+{
+  "name": "word-counter-app",
+  "version": "1.0.0",
+  "description": "A JavaScript based app that allows users to count words in a .txt file",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rolandosorbelli/word-counter-app.git"
+  },
+  "author": "Rolando Sorbelli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolandosorbelli/word-counter-app/issues"
+  },
+  "homepage": "https://github.com/rolandosorbelli/word-counter-app#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.12.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^4.0.1"
+  }
+}
