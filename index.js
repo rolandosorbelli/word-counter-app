@@ -16,7 +16,8 @@ function run(url, fileName){
 		fileOutput.on("finish", function(){
 			var count = new WordCount();
 			count.pushWords(fileName);
-			fs.writeFileSync('./public/' + fileName + '.txt', JSON.stringify(count.counted, null, 4));
+			count.countWords();
+			fs.writeFileSync('./public/' + fileName + '.txt', JSON.stringify(count.counted, null, "\t"));
 		});
 		response.pipe(fileOutput);
 	});
