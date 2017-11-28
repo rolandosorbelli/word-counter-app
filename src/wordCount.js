@@ -1,5 +1,6 @@
-var fs = require('fs');
-const {getData, storeData, formatData} = require('./getData')
+var fs = require("fs");
+var {getData, storeData, formatData} = require("./getData")
+var isPrime = require("./primeNumbers")
 
 function WordCount(){
 	this.words = []
@@ -19,6 +20,16 @@ WordCount.prototype.countWords = function(){
 			self.counted[word] +=1;
 		}
 	});
+};
+
+WordCount.prototype.primeValues = function(number) {
+  return { count: number, prime: isPrime(number) }
+};
+
+WordCount.prototype.formattedText = function() {
+  for (var word in this.counted) {
+    this.counted[word] = this.primeValues(this.counted[word]);
+  }
 };
 
 module.exports = WordCount;

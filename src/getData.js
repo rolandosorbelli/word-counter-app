@@ -1,7 +1,7 @@
 var fs = require("fs")
 
 function getData(fileName) {
-  return './' + fileName + '.txt'
+  return "./" + fileName + ".txt"
 };
 
 function storeData(fileName) {
@@ -11,7 +11,7 @@ function storeData(fileName) {
 
 function formatData(fileName) {
   data = fs.readFileSync(getData(fileName), "utf8");
-  return data.toUpperCase().replace(/_|\.|\'/g, '').split(/\s+/);
+  return data.toUpperCase().replace(/_|\.|\"|,|\?|-|!|;|\\|\'|\:/g, "").split(/\s+/);
 };
 
 module.exports.getData = getData;

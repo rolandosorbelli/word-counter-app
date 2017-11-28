@@ -1,8 +1,7 @@
-var chai = require('chai');
+var chai = require("chai");
 var expect = chai.expect;
-var fs = require('fs');
-var WordCount = require('../src/wordCount');
-const {getData, storeData, formatData} = require('../src/getData')
+var WordCount = require("../src/wordCount");
+var {getData, storeData, formatData} = require("../src/getData")
 
 describe("getData", function(){
 
@@ -11,13 +10,8 @@ describe("getData", function(){
 		expect(data).to.equal("./input-test.txt")
 	});
 
-	it('returns an array of strings', function() {
-		data = formatData('public/input-test');
+	it("returns an array of strings", function() {
+		data = formatData("public/input-test");
 		expect(data).to.eql([ "THIS", "FILE", "IS", "A", "TEST", "BECAUSE", "IT", "IS", "A", "TEST" ]);
 	});
-
-	it('returns an array of strings', function() {
-		data = formatData('public/input-test');
-		expect(data).to.eql([ "THIS", "FILE", "IS", "A", "TEST", "BECAUSE", "IT", "IS", "A", "TEST" ]);
-	});
-})
+});
